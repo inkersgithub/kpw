@@ -1,0 +1,130 @@
+.MaterialToast {
+    position: fixed;
+    bottom: 0px;
+    border-radius: 3px;
+    left: 30%;
+    right: 30%;
+    /*border:2px solid red;*/
+    margin-bottom: 20px;
+    width: 40%;
+    padding: 10px;
+    background: #474747;
+    color: #fff;
+    text-align: center;
+    z-index: 9999999;
+}
+
+.hidenform
+{display:none!important;}
+
+
+/* FOR MOBILE */
+
+@media only screen and (max-width: 600px) {
+    .formobile {
+        padding: 0 25px !important;
+    }
+    .fwidthmobile {
+        width: 100% !important;
+    }
+    .hidemobile {
+        display: none !important;
+    }
+    .centermobile {
+        text-align: center !important;
+    }
+    .MaterialToast {
+        width: auto;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 0;
+        margin-bottom: 0px;
+        padding: 18px;
+    }
+}
+
+
+/* ANIMATIONS */
+
+.ToastAnimStart {
+    animation-name: start;
+    animation-duration: 0.2s;
+}
+
+@keyframes start {
+    0% {
+        bottom: -60px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+.ToastAnimEnd {
+    animation-name: end;
+    animation-duration: 0.5s;
+    bottom: -60px;
+}
+
+@keyframes end {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: -60px;
+    }
+}
+
+
+.mtop20p
+{margin-top: 20%;}
+.mtop15p
+{margin-top: 10%;}
+.mtop40
+{margin-top: 40px;}
+.mtop60
+{margin-top: 60px;}
+.bg-img{
+    background-image: url(../img/bg-img.png);
+    background-size:400px;
+    background-color: #be2222;
+}
+/* Loader */
+.loader {
+    vertical-align: middle;
+    margin:23% auto;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #be2222;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loaderContainer
+  {
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eee;
+    z-index: 99999;
+  }
+   .hidewrp{
+    display: none;
+  }
+    .has-error{border: red 1px solid;}

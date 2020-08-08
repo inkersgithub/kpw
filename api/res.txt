@@ -1,0 +1,1 @@
+INSERT  INTO rp_transactions (`rpt_pid`, `rpt_mpan`, `rpt_amt`, `rpt_stscod`, `rpt_stsdes`)  VALUES ('REDP667864', '4403842800540106', '88881', '05', 'Transcation Uploaded')

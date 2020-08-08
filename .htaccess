@@ -1,0 +1,27 @@
+Options +FollowSymLinks -MultiViews -Indexes
+RewriteEngine On
+RewriteBase /kpower/
+ErrorDocument 404 /notfound.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ index.php?route=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/([^/]+)$ index.php?route=$1&ext=$2 [L]
+
+
+RewriteRule ^course-details$ course-details.php
+RewriteRule ^course-detail/(.*)$ course-details.php?csid=$1
+
+RewriteCond %{REQUEST_URI} !^subject-details [NC]
+RewriteRule ^subject-details$ subject-details.php
+RewriteRule ^subject-details/(.*)$ subject-details.php?subid=$1&crsid=$1
+
+RewriteRule ^api/notification/$ api/notification.php [QSA,L]
